@@ -20,9 +20,8 @@ const handleError = (err, res) => {
 };
 
 const formatTimer = (t) => {
-  const startTime = new Date(t.start || t.created_at || t.start_time).getTime();
-  const endTime =
-    t.end_time || t.end ? new Date(t.end_time || t.end).getTime() : null;
+  const startTime = new Date(t.start_time).getTime();
+  const endTime = t.end_time ? new Date(t.end_time).getTime() : null;
   const now = Date.now();
 
   return {
@@ -87,7 +86,7 @@ route.post("/", async (req, res) => {
         timer_id: nanoid(),
         user_id: req.user.id,
         description: description || "",
-        start: new Date(),
+        start_time: new Date(),
         is_active: true,
       })
       .returning("*");
