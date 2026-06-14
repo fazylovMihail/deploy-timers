@@ -1,5 +1,6 @@
 const { readSessionId } = require("./validateSession");
 const { findUserBySessionId } = require("../utilits");
+const { UserSchema } = require("../models/User");
 
 const guestMiddleware = async (req, res, next) => {
   try {
