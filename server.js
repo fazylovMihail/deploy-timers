@@ -3,7 +3,7 @@ require("dotenv").config(); // dotenv import
 // imports
 const express = require("express");
 const cookieParser = require("cookie-parser");
-const validateSession = require("./modules/middlewares/validateSession");
+const { validateSession } = require("./modules/middlewares/validateSession");
 const authRoute = require("./modules/routes/auth");
 const timersRoute = require("./modules/routes/timers");
 const path = require("path");
