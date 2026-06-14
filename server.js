@@ -24,7 +24,4 @@ app.use("/auth", authRoute);
 app.use("/timers", timersRoute);
 
 // launch server
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`   Server listen on http://localhost:${PORT}`);
-});
+module.exports = app;
