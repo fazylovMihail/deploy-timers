@@ -1,3 +1,5 @@
+const { readSessionId } = require("./validateSession");
+
 const guestMiddleware = async (req, res, next) => {
   try {
     const sessionId = readSessionId(req);

@@ -28,4 +28,4 @@ const validateSession = async (req, res, next) => {
   }
 };
 
-module.exports = validateSession;
+module.exports = { readSessionId, validateSession };
